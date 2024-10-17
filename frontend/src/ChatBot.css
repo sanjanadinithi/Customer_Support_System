@@ -1,0 +1,133 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  font-family: 'Roboto', sans-serif;
+  margin: 50px auto;
+}
+
+.chat-header {
+  background-color: #005bbb;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1em;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+}
+
+.chat-message {
+  display: flex;
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s forwards;
+}
+
+.chat-message.user {
+  justify-content: flex-end;
+}
+
+.chat-message.bot {
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-avatar {
+  background-color: #598cdf;
+}
+
+.bot-avatar {
+  background-color: #cccccc;
+}
+
+.message {
+  max-width: 70%;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message.user .message {
+  background-color: #3b83f6b4;
+  color: white;
+}
+
+.chat-message.bot .message {
+  background-color: #e0e0e0;
+}
+
+.timestamp {
+  font-size: 0.75em;
+  color: #777;
+  margin-top: 5px;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  outline: none;
+}
+
+.send-button {
+  width: 20%;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #005bb5;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 3px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  animation: blink 1s infinite ease-in-out alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
